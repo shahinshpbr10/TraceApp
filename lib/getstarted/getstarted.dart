@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:traceapp/Common/textstyles.dart';
+import 'package:traceapp/getstarted/getstarted2.dart';
 
 import '../Common/appcolor.dart';
 
@@ -68,7 +69,11 @@ class _GetstartedState extends State<Getstarted> {
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
                   child: SizedBox(height: 60,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(CupertinoPageRoute(builder: (context) {
+                            return Getstarted2();
+                          },));
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
