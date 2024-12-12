@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:traceapp/Forgetpage/forget_Page.dart';
+import 'package:traceapp/bottomnavbar/bottomnavbar.dart';
 
 import '../Common/appcolor.dart';
 import '../Common/textstyles.dart';
@@ -53,10 +55,9 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                          return ForgetPage();
-                        }));
+                    Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
+                      return BottomNavBar();
+                    },));
                   },
                   child: Text('LOGIN',style: AppTextStyles.smallBodyText.copyWith(color: AppColors.appwhite),),
                   style: ElevatedButton.styleFrom(
@@ -79,7 +80,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // Navigate to Sign Up page
+
                       },
                       child: Text(
                         'Sign Up',
@@ -89,7 +90,24 @@ class LoginPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 100),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(onTap: () {
+                      Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
+                        return ForgetPage();
+                      },));
+                    },
+                      child: Text(
+                        'Forget password? ',
+
+                        style: AppTextStyles.smallBodyText
+                            .copyWith(color: AppColors.black),
+                      ),
+                    ),
+
+                  ],
+                ),                SizedBox(height: 100),
               ],
             ),
           ),
