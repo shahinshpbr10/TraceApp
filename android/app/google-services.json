@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "455249285995",
+    "project_id": "trace-101d3",
+    "storage_bucket": "trace-101d3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455249285995:android:9d2d362e89559353c0722e",
+        "android_client_info": {
+          "package_name": "com.trace.bus.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9OAE_3rK7gJv3DyQXUebSxvKjxc-VSbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

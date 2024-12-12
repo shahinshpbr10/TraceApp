@@ -1,4 +1,4 @@
-package com.example.traceapp
+package com.trace.bus.app
 
 import io.flutter.embedding.android.FlutterActivity
 
