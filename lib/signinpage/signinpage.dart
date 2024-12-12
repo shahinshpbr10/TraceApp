@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:traceapp/Forgetpage/forget_Page.dart';
 
 import '../Common/appcolor.dart';
 import '../Common/textstyles.dart';
@@ -54,7 +55,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return Placeholder();
+                          return ForgetPage();
                         }));
                   },
                   child: Text('LOGIN',style: AppTextStyles.smallBodyText.copyWith(color: AppColors.appwhite),),
