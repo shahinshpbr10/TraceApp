@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:traceapp/Historypage/historypage.dart';
 
 import '../Home/homepage.dart';
-
-
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -14,9 +13,11 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _currentIndex = 0;
 
-  final List<dynamic> _children = [
+  // Pages to navigate
+  final List<Widget> _children = [
     HomePage(),
-    HistoryPage(),
+    TransactionListingPage(),
+    QRPage(),
     SettingsPage(),
   ];
 
@@ -33,6 +34,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentIndex,
+        selectedItemColor: Colors.blueAccent,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -41,6 +45,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.qr_code_scanner),
+            label: 'QR',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
@@ -52,8 +60,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
-
-
+// History Page
 class HistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,6 +75,25 @@ class HistoryPage extends StatelessWidget {
   }
 }
 
+// QR Page
+class QRPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('QR Scanner'),
+      ),
+      body: Center(
+        child: Text(
+          'QR Code Scanner Page',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
+
+// Settings Page
 class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
