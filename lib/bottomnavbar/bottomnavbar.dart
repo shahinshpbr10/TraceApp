@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:traceapp/Historypage/historypage.dart';
+import 'package:traceapp/qrpage/qrpage.dart';
+import 'package:traceapp/settings/settingspage.dart';
 
 import '../Home/homepage.dart';
 
@@ -17,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final List<Widget> _children = [
     HomePage(),
     TransactionListingPage(),
-    QRPage(),
+    QRScannerScreen(),
     SettingsPage(),
   ];
 
@@ -60,50 +62,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
-// History Page
-class HistoryPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('History'),
-      ),
-      body: Center(
-        child: Text('History Page'),
-      ),
-    );
-  }
-}
 
-// QR Page
-class QRPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('QR Scanner'),
-      ),
-      body: Center(
-        child: Text(
-          'QR Code Scanner Page',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
-  }
-}
 
-// Settings Page
-class SettingsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-      ),
-      body: Center(
-        child: Text('Settings Page'),
-      ),
-    );
-  }
-}
+
+
+
+

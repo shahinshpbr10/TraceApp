@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:traceapp/Common/appcolor.dart';
+import 'package:traceapp/Common/textstyles.dart';
 
 class TransactionListingPage extends StatefulWidget {
   const TransactionListingPage({super.key});
@@ -51,7 +52,7 @@ class _TransactionListingPageState extends State<TransactionListingPage> {
       appBar: AppBar(automaticallyImplyLeading: false,
         title: Text(
           'Transactions',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: AppTextStyles.bodyText.copyWith(fontSize: 20),
         ),
         backgroundColor: AppColors.white,
         elevation: 0,
@@ -155,7 +156,7 @@ class FilterChipWidget extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyle(
+          style: AppTextStyles.bodyText.copyWith(
             color: isSelected ? Colors.white : Colors.black87,
             fontWeight: FontWeight.bold,
           ),
@@ -208,10 +209,11 @@ class TransactionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+
+
+      decoration: BoxDecoration(color: AppColors.black.withOpacity(0.05),borderRadius: BorderRadius.circular(8)),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: _getStatusColor(status).withOpacity(0.2),
@@ -222,23 +224,23 @@ class TransactionCard extends StatelessWidget {
         ),
         title: Text(
           busName,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          style: AppTextStyles.bodyText.copyWith(fontWeight: FontWeight.bold, fontSize: 16),
         ),
         subtitle: Text(
           'Date: $date',
-          style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
+          style: AppTextStyles.caption.copyWith(color: Colors.grey.shade600, fontSize: 12),
         ),
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               '\$${amount.toStringAsFixed(2)}',
-              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+              style: AppTextStyles.caption.copyWith(fontWeight: FontWeight.bold, color: Colors.black87),
             ),
             SizedBox(height: 4),
             Text(
               status,
-              style: TextStyle(
+              style: AppTextStyles.caption.copyWith(
                 color: _getStatusColor(status),
                 fontWeight: FontWeight.bold,
                 fontSize: 12,

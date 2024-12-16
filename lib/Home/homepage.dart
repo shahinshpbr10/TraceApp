@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:traceapp/Common/appcolor.dart';
 
+import '../Common/textstyles.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -58,11 +60,7 @@ class _HomePageState extends State<HomePage> {
                   left: 20,
                   child: Text(
                     'Hello,\nShahinsh Pbr',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style:AppTextStyles.bodyText.copyWith(color: AppColors.white,fontSize: 26),
                   ),
                 ),
               ],
@@ -82,11 +80,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     'Available bus',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
+                    style:AppTextStyles.bodyText.copyWith(color: AppColors.black,fontSize: 20,)
                   ),
                 ],
               ),
@@ -134,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                             onPressed: () {
                               // See All Action
                             },
-                            child: Text('See All'),
+                            child: Text('See All',style: AppTextStyles.caption.copyWith(color: AppColors.white),),
                           ),
                         ),
                       ),
@@ -176,7 +170,7 @@ class FilterButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 14),
         child: Text(
           title,
-          style: TextStyle(
+          style: AppTextStyles.bodyText.copyWith(
             color: isActive ? Colors.white : Colors.grey.shade800,
             fontWeight: FontWeight.bold,
           ),
@@ -224,27 +218,15 @@ class BusCard extends StatelessWidget {
                 children: [
                   Text(
                     busName,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
+                    style: AppTextStyles.bodyText.copyWith(fontSize:18 ),
                   ),
                   Text(
                     "Number: KL53Q4116",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black38,
-                    ),
+                    style: AppTextStyles.bodyText.copyWith(fontSize:15 ),
                   ),
                   Text(
                     "Type: Ac",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black38,
-                    ),
+                    style: AppTextStyles.bodyText.copyWith(fontSize:12 ,color: Colors.black38 ),
                   ),
                 ],
               ),
