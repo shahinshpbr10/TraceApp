@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:traceapp/Admin/bottomnavadmin/bottomnavadmin.dart';
 import 'package:traceapp/Admin/bottomnavadmin/home/adminhome.dart';
 import 'package:traceapp/Passenger/SplashPage/splashpage.dart';
 
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:AdminHomePage(),
+      home:AdminBottomNavBar(),
 
     );
   }

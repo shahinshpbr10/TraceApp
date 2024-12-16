@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:traceapp/Admin/bottomnavadmin/AdminDashBoard/admindash.dart';
+import 'package:traceapp/Admin/bottomnavadmin/addworkerpage.dart';
 import 'package:traceapp/Admin/bottomnavadmin/widgets/buscard.dart';
 import 'package:traceapp/Admin/bottomnavadmin/widgets/workercard.dart';
+import 'package:traceapp/Admin/bottomnavadmin/workeslistingpage.dart';
 
 import '../../../Passenger/Common/appcolor.dart';
 import '../../../Passenger/Common/textstyles.dart';
@@ -145,7 +147,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                           children: [
                             OutlinedButton(
                               onPressed: () { Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
-                                return AddTransactionPageAdmin();
+                                return AddWorkerPage();
                               },));},
                               child: Icon(Iconsax.add),
 
@@ -153,7 +155,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                             ElevatedButton(style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(AppColors.maincolor2)),
                                 onPressed: () {
                                   Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
-                                    return TransactionListPageAdmin();
+                                    return WorkerListingPage();
                                   },));
                                 }, child: Text('See All',style: AppTextStyles.caption.copyWith(color: AppColors.white),))
                           ],
