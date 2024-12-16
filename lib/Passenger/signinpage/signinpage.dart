@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:traceapp/Forgetpage/forget_Page.dart';
-import 'package:traceapp/bottomnavbar/bottomnavbar.dart';
+import 'package:traceapp/Passenger/Forgetpage/forget_Page.dart';
 
 import '../Common/appcolor.dart';
 import '../Common/textstyles.dart';
+import '../bottomnavbar/bottomnavbar.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

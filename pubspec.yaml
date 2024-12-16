@@ -44,6 +44,8 @@ dependencies:
   carousel_slider: ^4.2.1
   qr_code_scanner_plus: ^2.0.6
   url_launcher: ^6.1.7
+  provider: ^6.1.2
+  fl_chart: ^0.68.0
 
 
 dev_dependencies:

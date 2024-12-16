@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:traceapp/Common/appcolor.dart';
-import 'package:traceapp/Common/textstyles.dart';
-import 'package:traceapp/getstarted/getstarted.dart';
+
+import 'package:traceapp/Passenger/getstarted/getstarted.dart';
+
+import '../Common/appcolor.dart';
+import '../Common/textstyles.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:traceapp/Common/textstyles.dart';
 
 import '../Common/appcolor.dart';
+import '../Common/textstyles.dart';
 
 class SettingsPage extends StatelessWidget {
   @override

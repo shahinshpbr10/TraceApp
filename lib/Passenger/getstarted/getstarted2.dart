@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:traceapp/Common/textstyles.dart';
-import 'package:traceapp/signinpage/signinpage.dart';
-import 'package:traceapp/signuppage/signuppage.dart';
+import 'package:traceapp/Passenger/Common/textstyles.dart';
+import 'package:traceapp/Passenger/signinpage/signinpage.dart';
+import 'package:traceapp/Passenger/signuppage/signuppage.dart';
 
 import '../Common/appcolor.dart';
+
+
 
 class Getstarted2 extends StatefulWidget {
   const Getstarted2({super.key});

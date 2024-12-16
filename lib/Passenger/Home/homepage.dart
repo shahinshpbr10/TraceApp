@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:traceapp/Common/appcolor.dart';
 
+import '../Common/appcolor.dart';
 import '../Common/textstyles.dart';
 
 class HomePage extends StatefulWidget {

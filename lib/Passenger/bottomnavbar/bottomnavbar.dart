@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:traceapp/Historypage/historypage.dart';
-import 'package:traceapp/qrpage/qrpage.dart';
-import 'package:traceapp/settings/settingspage.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:traceapp/Passenger/Historypage/historypage.dart';
+import 'package:traceapp/Passenger/qrpage/qrpage.dart';
+import 'package:traceapp/Passenger/settings/settingspage.dart';
 
 import '../Home/homepage.dart';
+
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -41,19 +43,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Iconsax.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
+            icon: Icon(Iconsax.money),
             label: 'History',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.qr_code_scanner),
+            icon: Icon(Iconsax.scan),
             label: 'QR',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Iconsax.setting),
             label: 'Settings',
           ),
         ],
